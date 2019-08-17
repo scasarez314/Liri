@@ -35,8 +35,6 @@ switch (switchBoardcommand) {
                     console.log("~~~ Here are some concert dates I found for", concertresponse.data[i].lineup[0] + "'s", "tour dates~~~");
                     console.log("");
                     console.log("Venue: The", element.name, "in", element.city + ",", element.country, "on", formatmomentTime);
-                    console.log("Ticket Status:", concertresponse.data[0].status);
-                    console.log("");
                     console.log("");
                     console.log("If needed, I linked a webpage to buy the tickets!");
                     // console.log(elementtwo);
@@ -74,15 +72,13 @@ switch (switchBoardcommand) {
                 console.log(response.data.Title, "included a phenominal cast consisting of", response.data.Actors, "and together created a film about", response.data.Plot + "");
                 console.log("");
                 console.log("The IMDB movie rating for", response.data.Title, "is", response.data.imdbRating + ",");
-                console.log("Rotten Tomato also rated", response.data.Title, response.data.Ratings[1] + ".");
+                console.log("Rotten Tomato also gave", response.data.Title, "an", response.data.Ratings[1].Value + ".");
                 console.log("");
                 console.log("========================================================================================================================================");
 
-
-
             })
             .catch(function (error) {
-                if (error.response) {
+                if (error) {
                     console.log(error);
 
                 } else {
