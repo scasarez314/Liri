@@ -114,12 +114,8 @@ switch (switchBoardcommand) {
             }
 
 
-            console.log(data);
-
-            // Then split it by commas (to make it more readable)
+            // console.log(data);
             var randomtxtArry = data.split(",");
-
-            // We will then re-display the content as an array for later use.
             console.log(randomtxtArry);
 
 
