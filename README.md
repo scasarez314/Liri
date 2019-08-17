@@ -9,3 +9,22 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 * move-this
 * do-what-it-says
 
+# <h6>Liri'd functionally</h6>
+
+# <h2>Clearly list the technologies used in the app</h2>
+* Javascript
+* Nodejs
+* Node packages:
+* Node-Spotify-API
+* Request
+* Moment
+* DotEnv
+# <h6>APIs used:</h6>
+    * Bands in Town
+    * OMDB
+    * Git
+    * GitHub
+
+# <h6>State your role in the app development.</h6> 
+Developer
+
