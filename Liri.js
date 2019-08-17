@@ -52,29 +52,7 @@ switch (switchBoardcommand) {
         break;
 
     case "spotify-this-song":
-        spotify.search({ type: 'track', query: userInput, limit: 1 }, function (err, data) {
-            if (err) {
-                return console.log('Error occurred: ' + err);
-            }
-
-            // console.log(data.tracks.items[0]);
-            for (let i = 0; i < data.tracks.items.length; i++) {
-                const element = data.tracks.items[i];
-                console.log("========================================================================================================================================");
-                console.log("");
-                console.log("~~~ Ok, here is what I found for your song search ~~~");
-                console.log("");
-                console.log("The artist for the song you searched is", element.artists[0].name + ",", element.artists[0].name, "released", element.name, "on the", element.album.name, "album"); //title "in", //year, "on the", //albumname, "album.");
-                console.log("");
-                console.log("I provided a preview of the song here.");
-                // console.log(element.album.external_urls.name);
-                console.log(element.external_urls.spotify);
-                console.log("");
-                console.log("========================================================================================================================================");
-                // console.log(element.album.release_day)
-            }
-
-        });
+        spotifySong(userInput);
         break;
 
     case "movie-this":
@@ -119,10 +97,8 @@ switch (switchBoardcommand) {
 
 
             // console.log(data);
-            var randomtxtArry = data.split(",");
-            console.log(randomtxtArry);
-            var joinedtxtArray = randomtxtArry.join(" ");
-            console.log(joinedtxtArray);
+            var randomtxtArry = data.split(",")[1];
+            spotifySong(randomtxtArry);
 
 
 
@@ -134,5 +110,29 @@ switch (switchBoardcommand) {
         break;
 }
 
+function spotifySong(query) {
+    spotify.search({ type: 'track', query, limit: 1 }, function (err, data) {
+        if (err) {
+            return console.log('Error occurred: ' + err);
+        }
 
+        // console.log(data.tracks.items[0]);
+        for (let i = 0; i < data.tracks.items.length; i++) {
+            const element = data.tracks.items[i];
+            console.log("========================================================================================================================================");
+            console.log("");
+            console.log("~~~ Ok, here is what I found for your song search ~~~");
+            console.log("");
+            console.log("The artist for the song you searched is", element.artists[0].name + ",", element.artists[0].name, "released", element.name, "on the", element.album.name, "album"); //title "in", //year, "on the", //albumname, "album.");
+            console.log("");
+            console.log("I provided a preview of the song here.");
+            // console.log(element.album.external_urls.name);
+            console.log(element.external_urls.spotify);
+            console.log("");
+            console.log("========================================================================================================================================");
+            // console.log(element.album.release_day)
+        }
+
+    });
+}
 
