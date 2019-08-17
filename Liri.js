@@ -2,6 +2,8 @@
 var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
 var axios = require("axios");
+var fs = require("fs");
+
 // console.log(keys.spotify);
 var spotify = new Spotify(keys.spotify);
 
@@ -62,14 +64,14 @@ switch (switchBoardcommand) {
                 console.log("");
                 console.log("~~~ Ok, here is what I found for your song search ~~~");
                 console.log("");
-                console.log("The artist for the song you searched is", element.artists[0].name + ",", element.artists[0].name, "released"); //title "in", //year, "on the", //albumname, "album.");
+                console.log("The artist for the song you searched is", element.artists[0].name + ",", element.artists[0].name, "released", element.name, "on the", element.album.name, "album"); //title "in", //year, "on the", //albumname, "album.");
                 console.log("");
                 console.log("I provided a preview of the song here, hope you enjoy it", "😁");
                 // console.log(element.album.external_urls.name);
                 console.log(element.external_urls.spotify);
                 console.log("");
                 console.log("========================================================================================================================================");
-
+                // console.log(element.album.release_day)
             }
 
         });
@@ -82,6 +84,7 @@ switch (switchBoardcommand) {
                 console.log("========================================================================================================================================");
                 console.log("");
                 console.log("~~~ Ok, here is what I found for", response.data.Title + " ~~~");
+                console.log("");
                 console.log(response.data.Title, "was released in", response.data.Year + ", and was filmed in the", response.data.Country + ";", "in", response.data.Language + ".");
                 console.log(response.data.Title, "included a phenominal cast consisting of", response.data.Actors, "and together created a film about", response.data.Plot + "");
                 console.log("");
@@ -103,6 +106,24 @@ switch (switchBoardcommand) {
 
     case "do-what-it-says":
 
+
+        fs.readFile("random.txt", "utf8", function (error, data) {
+
+            if (error) {
+                return console.log(error);
+            }
+
+
+            console.log(data);
+
+            // Then split it by commas (to make it more readable)
+            var randomtxtArry = data.split(",");
+
+            // We will then re-display the content as an array for later use.
+            console.log(randomtxtArry);
+
+
+        });
 
         break;
     default:
