@@ -3,6 +3,7 @@ var keys = require("./keys.js");
 var Spotify = require('node-spotify-api');
 var axios = require("axios");
 var fs = require("fs");
+var moment = require('moment');
 
 // console.log(keys.spotify);
 var spotify = new Spotify(keys.spotify);
@@ -19,16 +20,21 @@ switch (switchBoardcommand) {
 
         axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp").then(
             function (concertresponse) {
+
                 for (let i = 0; i < concertresponse.data.length; i++) {
                     const element = concertresponse.data[i].venue;
                     const elementtwo = concertresponse.data[i];
+                    var momentTime = moment(elementtwo.datetime)
+                    // console.log(elementtwo.datetime);
+                    var formatmomentTime = moment(momentTime).format('MMMM Do YYYY, h:mm:ss a');
+                    // console.log(formatmomentTime)
 
                     console.log("========================================================================================================================================");
                     console.log("");
                     console.log("");
                     console.log("~~~ Here are some concert dates I found for", concertresponse.data[i].lineup[0] + "'s", "tour dates~~~");
                     console.log("");
-                    console.log("Venue: The", element.name, "in", element.city + ",", element.country, "on", elementtwo.datetime);
+                    console.log("Venue: The", element.name, "in", element.city + ",", element.country, "on", formatmomentTime);
                     console.log("Ticket Status:", concertresponse.data[0].status);
                     console.log("");
                     console.log("");
