@@ -40,11 +40,11 @@ switch (switchBoardcommand) {
                 }
             })
             .catch(function (error) {
-                if (error.response) {
-                    console.log(error);
+                if (response === "") {
+                    console.log("Its empty");
 
                 } else {
-                    console.log();
+                    console.log(error);
                 }
 
             });
@@ -66,7 +66,7 @@ switch (switchBoardcommand) {
                 console.log("");
                 console.log("The artist for the song you searched is", element.artists[0].name + ",", element.artists[0].name, "released", element.name, "on the", element.album.name, "album"); //title "in", //year, "on the", //albumname, "album.");
                 console.log("");
-                console.log("I provided a preview of the song here, hope you enjoy it", "😁");
+                console.log("I provided a preview of the song here.");
                 // console.log(element.album.external_urls.name);
                 console.log(element.external_urls.spotify);
                 console.log("");
@@ -81,6 +81,7 @@ switch (switchBoardcommand) {
 
         axios.get("http://www.omdbapi.com/?t=" + userInput + "&y=&plot=short&apikey=trilogy").then(
             function (response) {
+
                 console.log("========================================================================================================================================");
                 console.log("");
                 console.log("~~~ Ok, here is what I found for", response.data.Title + " ~~~");
@@ -92,6 +93,9 @@ switch (switchBoardcommand) {
                 console.log("Rotten Tomato also rated", response.data.Title, response.data.Ratings[1] + ".");
                 console.log("");
                 console.log("========================================================================================================================================");
+
+
+
             })
             .catch(function (error) {
                 if (error.response) {
@@ -117,6 +121,10 @@ switch (switchBoardcommand) {
             // console.log(data);
             var randomtxtArry = data.split(",");
             console.log(randomtxtArry);
+            var joinedtxtArray = randomtxtArry.join(" ");
+            console.log(joinedtxtArray);
+
+
 
 
         });
