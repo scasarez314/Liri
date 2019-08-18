@@ -7,8 +7,11 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 * concert-this
 ![concert-this](images/concert-this.png)
 * spotify-this-song
+![spotify-this-song](images/spotify-this-song.png)
 * move-this
+![movie-this](images/move-this.png)
 * do-what-it-says
+![do_what_it_says](images/do-what-it-says.png)
 
 # <h3>Liri's functionally</h3>
 
