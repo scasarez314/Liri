@@ -6,6 +6,17 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 # 
 # <h3>Liri's functionality and the different commands Liri will accept.</h3>
 * concert-this
+1. Open your terminal such as Bash.
+
+2. Navigate to the folder that contains the liri.js file.
+
+3. Run the concert-this command in the terminal. 
+
+<div class="bg-green-light mb-2">
+   node liri.js concert-this {name of artist or band}
+</div>
+
+
 ![concert-this](images/concert-this.png)
 * spotify-this-song
 ![spotify-this-song](images/spotify-this.png)
@@ -15,7 +26,7 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 ![do_what_it_says](images/do-what-it-says.png)
 
 
-# <h2>Technologies used in Liri</h2>
+# <h2>Technologies used in Liri.</h2>
 * Javascript
 * Nodejs
 * Node packages:
