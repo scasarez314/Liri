@@ -5,6 +5,7 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 
 # <h3>The different commands Liri will accept.</h3>
 * concert-this
+![concert-this](images/concert-this.png)
 * spotify-this-song
 * move-this
 * do-what-it-says
