@@ -7,7 +7,7 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 # <h3>Liri's functionality and the different commands Liri will accept.</h3>
 
 
-#<h3> concert-this 
+#<h3> concert-this </h3>
 
 1. Open your terminal such as Bash.
 
@@ -20,19 +20,19 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 
 ![concert-this](images/concert-this.png)
 
-# <h3> spotify-this-song
+# <h3> spotify-this-song</h3>
 
 1. terminal command = node liri.js spotify-this-song {name of song} 
 
 ![spotify-this-song](images/spotify-this.png)
 
-# <h3> move-this
+# <h3> move-this</h3>
 
 1. terminal command = node liri.js movie-this {name of movie} 
 
 ![movie-this](images/movie-this.png)
 
-#<h3> do-what-it-says
+#<h3> do-what-it-says</h3>
 
 1. terminal command = node liri.js do-this-thing
 ![do_what_it_says](images/do-what-it-says.png)
