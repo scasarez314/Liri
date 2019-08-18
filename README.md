@@ -12,8 +12,7 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 
 3. Run the concert-this command in the terminal. 
 
-  $bg-green-light node liri.js concert-this {name of artist or band} $bg-green-light
-
+  terminal command = node liri.js concert-this {name of artist or band} 
 
 
 ![concert-this](images/concert-this.png)
