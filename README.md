@@ -9,7 +9,7 @@ In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, whi
 
 #<h3> concert-this </h3>
 
-1. Open your terminal such as Bash.
+1. Open your terminal in VisualStudio Code.
 
 2. Navigate to the folder that contains the liri.js file.
 
