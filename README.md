@@ -1,7 +1,7 @@
 # **LIRI-Bot**
 
 # **Overview:**
-In this assignment, you will make LIRI. LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
+In this assignment I created a bot named LIRI, Language Interpretation and Recognition Interface, that takes in parameters using command lines in a node app giving you back the data you requested.
 
 # 
 # <h3>Liri's functionality and the different commands Liri will accept.</h3>
