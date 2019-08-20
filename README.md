@@ -26,7 +26,7 @@ In this assignment I created a bot named LIRI, Language Interpretation and Recog
 
 ![spotify-this-song](images/spotify-this.png)
 
-# <h3> move-this</h3>
+# <h3> movie-this</h3>
 
 1. terminal command = node liri.js movie-this {name of movie} 
 
